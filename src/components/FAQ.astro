@@ -1,0 +1,34 @@
+---
+const faqs = [
+  {
+    question: "What is Applied Behavior Analysis (ABA)?",
+    answer: "Applied Behavior Analysis (ABA) is a scientifically validated treatment for individuals with autism spectrum disorder and other developmental disabilities. ABA focuses on improving behavior by understanding the relationship between behavior and its environment. ABA therapists work with individuals to develop and implement personalized treatment plans designed to improve communication, social skills, and daily living skills."
+  },
+  {
+    question: "What are the benefits of ABA therapy?",
+    answer: "ABA therapy can help individuals with autism spectrum disorder and other developmental disabilities develop essential skills, including functional communication, social interaction, self-care, and coping strategies. It can also reduce challenging behaviors, promote independence, and improve quality of life."
+  },
+  {
+    question: "How does Rooted Growth Behavioral Health provide ABA therapy?",
+    answer: "Rooted Growth Behavioral Health offers evidence-based ABA therapy to individuals up to 21 years old in Alameda County, CA. Our team of experienced and qualified therapists provide individualized treatment plans that are tailored to meet each client's unique needs and goals. We use a variety of ABA techniques, including discrete trial training, natural environment training, and pivotal response training."
+  },
+  {
+    question: "What are the qualifications of our ABA therapists?",
+    answer: "Our team of ABA therapists are experienced in providing comprehensive ABA therapy services. Our therapists are trained by Board Certified Behavior Analysts (BCBAs) and hold the necessary certifications to provide ABA services in California. They are trained to provide ethical and effective ABA therapy, ensuring the safety and well-being of our clients."
+  }
+];
+---
+
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+    <div class="max-w-3xl mx-auto space-y-6">
+      {faqs.map(faq => (
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-purple-700 mb-3">{faq.question}</h3>
+          <p class="text-gray-600">{faq.answer}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
