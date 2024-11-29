@@ -1,0 +1,26 @@
+---
+const baseUrl = import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL;
+---
+<section class="py-20 bg-gray-50" id="about">
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">About Us</h2>
+        <p class="text-lg text-gray-700 mb-6">
+          Rooted Growth Behavioral Health is a leading Applied Behavior Analysis (ABA) organization established in 2024. Founded by experts in the field of ABA, our team of Board Certified Behavior Analysts (BCBAs) are dedicated to helping individuals with autism spectrum disorder and other neurodevelopmental disabilities reach their full potential.
+        </p>
+        <h3 class="text-2xl font-bold text-purple-700 mb-4">Our Vision</h3>
+        <p class="text-lg text-gray-700">
+          Our team is rooted in helping those we serve achieve milestones that may have once seemed unattainable. We strive to increase the confidence and knowledge of families who seek to help their child become as independent as possible through applied behavior analytic services.
+        </p>
+      </div>
+      <div>
+        <img 
+          src={`${baseUrl}/images/playdate.jpg`}
+          alt="Children playing"
+          class="rounded-lg shadow-lg w-full"
+        />
+      </div>
+    </div>
+  </div>
+</section>

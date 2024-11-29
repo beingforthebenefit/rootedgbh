@@ -1,0 +1,21 @@
+---
+const baseUrl = import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL;
+---
+<section class="relative bg-pink-100 text-gray-700 py-20 md:py-32">
+  <div class="container mx-auto px-6">
+  <div class="flex flex-col md:flex-row items-center">
+    <div class="text-center md:text-left">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Rooted Growth Behavioral Health</h1>
+      <p class="text-xl mb-8">Providing applied behavioral analysis (ABA) therapy for neurodiverse individuals in Alameda County, California.</p>
+      <a href="#contact" class="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors">
+        Contact Us
+      </a>
+    </div>
+    <img 
+      src={`${baseUrl}/images/logo.png`}
+      alt="Rooted Growth Behavioral Health Logo"
+      class="w-40 h-40 mb-6 md:mb-0 md:mr-6"
+    />
+  </div>
+  </div>
+</section>
