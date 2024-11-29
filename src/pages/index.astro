@@ -1,14 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
 import ABASection from '../components/ABASection.astro';
 import TreatmentPlans from '../components/TreatmentPlans.astro';
 import Locations from '../components/Locations.astro';
 import Team from '../components/Team.astro';
 import FAQ from '../components/FAQ.astro';
 import Insurance from '../components/Insurance.astro';
+
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Rooted Growth Behavioral Health">
+  <Header />
   <main>
     <!-- Hero Section -->
     <section class="relative bg-purple-700 text-white py-20 md:py-32">
@@ -26,28 +30,28 @@ import Insurance from '../components/Insurance.astro';
     <!-- About Section -->
     <section class="py-20 bg-gray-50" id="about">
       <div class="container mx-auto px-6">
-        <div class="max-w-3xl mx-auto">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">About Us</h2>
-          <p class="text-lg text-gray-700 mb-6">
-            Rooted Growth Behavioral Health is a leading Applied Behavior Analysis (ABA) organization established in 2024. Founded by experts in the field of ABA, our team of Board Certified Behavior Analysts (BCBAs) are dedicated to helping individuals with autism spectrum disorder and other neurodevelopmental disabilities reach their full potential.
-          </p>
-          <div class="grid md:grid-cols-2 gap-8 mt-12">
-            <div>
-              <h3 class="text-2xl font-bold text-purple-700 mb-4">Our Vision</h3>
-              <p class="text-gray-700">
-                Our team is rooted in helping those we serve achieve milestones that may have once seemed unattainable. We strive to increase the confidence and knowledge of families who seek to help their child become as independent as possible through applied behavior analytic services.
-              </p>
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold text-purple-700 mb-4">Our Mission</h3>
-              <p class="text-gray-700">
-                At Rooted Growth Behavioral Health, we believe in the importance of partnership between families, clients, and service providers. When we support families through shared collaboration, research, and implementation of evidence-based behavior analytic practices, we unlock great potential.
-              </p>
-            </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">About Us</h2>
+            <p class="text-lg text-gray-700 mb-6">
+              Rooted Growth Behavioral Health is a leading Applied Behavior Analysis (ABA) organization established in 2024. Founded by experts in the field of ABA, our team of Board Certified Behavior Analysts (BCBAs) are dedicated to helping individuals with autism spectrum disorder and other neurodevelopmental disabilities reach their full potential.
+            </p>
+            <img 
+              src={`${baseUrl}/images/playdate.jpg`}
+              alt="Children playing"
+              class="rounded-lg shadow-lg w-full"
+            />
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-purple-700 mb-4">Our Vision</h3>
+            <p class="text-lg text-gray-700">
+              Our team is rooted in helping those we serve achieve milestones that may have once seemed unattainable. We strive to increase the confidence and knowledge of families who seek to help their child become as independent as possible through applied behavior analytic services.
+            </p>
           </div>
         </div>
       </div>
     </section>
+
 
     <!-- Services Section -->
     <section class="py-20" id="services">
@@ -122,7 +126,7 @@ import Insurance from '../components/Insurance.astro';
             <div>
               <h3 class="text-xl font-bold mb-4">Insurance Providers</h3>
               <p class="text-gray-600 mb-4">RGBH is currently contracted with the following insurance providers:</p>
-              <img src="/insurance-logos.png" alt="Insurance Providers" class="max-w-full h-auto"/>
+              <img src=`${baseUrl}/images/insurance-logos.png` alt="Insurance Providers" class="max-w-full h-auto"/>
             </div>
           </div>
         </div>
