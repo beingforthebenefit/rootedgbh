@@ -5,8 +5,12 @@ export default defineConfig({
   integrations: [tailwind()],
   site: 'https://beingforthebenefit.github.io',
   base: '/rootedgbh',
-  outDir: './dist',
   build: {
-    assets: '_assets'
+    assets: 'assets'
+  },
+  vite: {
+    build: {
+      assetsDir: 'assets'
+    }
   }
 });
