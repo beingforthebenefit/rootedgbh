@@ -3,6 +3,9 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://yourusername.github.io',  // Replace with your GitHub username
-  base: '/your-repo-name',  // Replace with your repository name
+  site: 'https://beingforthebenefit.github.io',
+  base: '/rootedgbh',
+  build: {
+    assets: '_assets'
+  }
 });
