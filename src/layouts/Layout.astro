@@ -1,22 +1,56 @@
 ---
+import { Schema } from 'astro-seo-schema';
+
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Rooted Growth Behavioral Health provides applied behavioral analysis (ABA) therapy for neurodiverse individuals in Alameda County, California." />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Rooted Growth Behavioral Health provides evidence-based applied behavioral analysis (ABA) therapy for neurodiverse individuals in Alameda County, California. Empowering families and individuals with customized treatment plans." />
+		<meta name="keywords" content="ABA therapy, behavioral health, autism therapy, neurodiverse support, Alameda County, Board Certified Behavior Analysts, Applied Behavior Analysis" />
+		<meta name="author" content="Rooted Growth Behavioral Health" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{title} | Rooted Growth Behavioral Health</title>
 		<link rel="icon" type="image/svg+xml" href="${baseUrl}/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-	</head>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+		<meta property="og:title" content="Rooted Growth Behavioral Health" />
+		<meta property="og:description" content="Providing ABA therapy for neurodiverse individuals in Alameda County, California. Evidence-based, personalized treatment plans by Board Certified Behavior Analysts." />
+		<meta property="og:image" content="${baseUrl}/images/og-image.jpg" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="${baseUrl}" />
+		<Schema
+			item={{
+			  "@context": "https://schema.org",
+			  "@type": "LocalBusiness",
+			  "name": "Rooted Growth Behavioral Health",
+			  "description": "Providing applied behavioral analysis (ABA) therapy for neurodiverse individuals in Alameda County, California.",
+			  "image": "${baseUrl}/images/logo.png",
+			  "url": "${baseUrl}",
+			  "telephone": "+1-510-675-7706",
+			  "email": "lrosas@rootedgbh.com",
+			  "address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Alameda County",
+				"addressRegion": "CA",
+				"addressCountry": "US"
+			  },
+			  "foundingDate": "2024",
+			  "logo": "${baseUrl}/images/logo.png",
+			  "areaServed": {
+				"@type": "AdministrativeArea",
+				"name": "Alameda County"
+			  },
+			  "priceRange": "$$"
+			}}
+		/>
+	</head>	  
 	<body class="font-sans antialiased">
 		<slot />
 
