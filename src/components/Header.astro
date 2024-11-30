@@ -1,6 +1,7 @@
 ---
 const baseUrl = import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL;
 ---
+
 <header class="fixed w-full bg-white shadow-sm z-50">
   <nav class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
@@ -31,4 +32,27 @@ const baseUrl = import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL
       </div>
     </div>
   </nav>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+    
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+          console.log('Menu button clicked');
+          mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+          });
+        });
+      } else {
+        console.error('Mobile menu button or menu not found');
+      }
+    });
+  </script>
 </header>
